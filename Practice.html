@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background Video</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body,
+      html {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        font-family: Arial, sans-serif;
+      }
+
+      /* Background video */
+      .video-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+      }
+
+      /* Content on top */
+      .content {
+        position: relative;
+        z-index: 1;
+        color: white;
+        text-align: center;
+        top: 40%;
+      }
+
+      h1 {
+        font-size: 4rem;
+      }
+
+      p {
+        font-size: 1.5rem;
+      }
+
+      .discord-link {
+        position: absolute;
+        left: 50%;
+        bottom: 8%;
+        transform: translateX(-50%);
+        z-index: 2;
+      }
+
+      .discord-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+        padding: 1rem 2rem;
+        background: linear-gradient(135deg, #4b7cff 0%, #2b5ae5 100%);
+        color: #ffffff;
+        font-size: 1.05rem;
+        font-weight: 700;
+        border: none;
+        border-radius: 999px;
+        text-decoration: none;
+        box-shadow: 0 18px 30px rgba(43, 93, 232, 0.24);
+        transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .discord-btn:hover {
+        transform: scale(1.04);
+        filter: brightness(1.08);
+        box-shadow: 0 22px 36px rgba(43, 93, 232, 0.32);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Video -->
+    <video autoplay muted loop playsinline class="video-bg">
+      <source src="VON EDIT.mp4" type="video/mp4" />
+      Your browser does not support HTML5 video.
+    </video>
+
+    <!-- Page Content -->
+    <div class="content">
+      <h1>Welcome</h1>
+      <p>My awesome website</p>
+    </div>
+
+    <div class="discord-link">
+      <a class="discord-btn" href="https://discord.gg/your-server-code" target="_blank" rel="noopener noreferrer">
+        Join our Discord
+      </a>
+    </div>
+  </body>
+</html>
+
+
